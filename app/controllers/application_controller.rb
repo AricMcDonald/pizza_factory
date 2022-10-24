@@ -1,6 +1,6 @@
 class ApplicationController < ActionController::API
     def index
-        pizzas = Pizza.order("created_at DESC")
+        pizzas = Pizza.get("created_at DESC")
         render json: pizzas
       end
     
